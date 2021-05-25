@@ -8,7 +8,7 @@ from django_elasticsearch_dsl_drf.analyzers import edge_ngram_completion
 
 __all__ = ('PublisherDocument', )
 
-INDEX = Index(settings.ELASTICSEARCH_INDEX_NAMES)
+INDEX = Index(settings.ELASTICSEARCH_INDEX_NAMES[__name__])
 
 INDEX.settings(
 	number_of_shards=1,
